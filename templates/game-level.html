@@ -1,0 +1,19 @@
+<div class="game game-level">
+  {% if attr['game_options'] %}
+  <div class="dropdown">
+    <button  class="btn btn-transparent dropdown-toggle btn-sm level-btn" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      game level
+    </button>
+
+    <div class="dropdown-menu menu-level" aria-labelledby="dropdownMenuButton">
+        {% for o in attr['game_options'] : %}
+          <a class="dropdown-item item-level" href="#"> {{ o }} </a>
+        {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  <a href="#">
+    <img class="icon" src="{{ url_for('static', filename='img/share_icon.png')}}">
+  </a>
+</div>

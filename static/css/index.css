@@ -1,0 +1,221 @@
+html,body {
+  min-width:100%;
+  min-height:100%;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  
+  max-width:  50%;
+  max-height: 70%;
+  margin: 5px;
+  padding:0;
+  
+  border-color:#E0E0E0;
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius:15px;
+}
+
+.game{
+  display:flex;
+  background:#FFF;
+  max-width: 99%;
+  max-height:99%;
+  padding:0;
+  margin-left: 5px;
+  margin : 5px 5px;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Game Level */
+/* ---------------------------------------------------------------------------- */
+.game-level{
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-level .dropdown-item { font-size: 12px; }
+.game-level .icon{
+  width:  18px;
+  height: 18px;
+  margin-right: 20px;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Game Role */
+/* ---------------------------------------------------------------------------- */
+.game-role{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-role .btn:focus, .game-role .btn:hover {
+  border-bottom-color: rgb(20, 189, 172) !important;
+  border-bottom-width:2px !important;
+}
+
+.game-role .btn {
+  display:flex;
+  flex-direction: row;
+  text-decoration: none;
+  
+  width: 25%;
+  margin: 3%;
+  justify-content: space-between;
+  align-items: center;
+  
+  border-color:#E0E0E0;
+  border-width: 1.8px;
+  
+  border-style: solid;
+  border-radius:7px;
+}
+
+.game-role .btn .char-player{
+  font-size: 15px;
+  font-weight:500;
+  color:#000000;
+}
+
+.game-role .btn .char-score{
+  font-size: 25px;
+  font-weight:600;
+  color:#78909C; 
+}
+
+.game-role .btn:focus, .game-role .btn.disabled-color {
+  border-bottom-color: rgb(20, 189, 172);
+  border-bottom-width:2px !important;
+  cursor: not-allowed;
+}
+
+.game-role .btn:focus, .game-role .btn.disabled-color:focus, .game-role .btn:focus, .game-role .btn.disabled-color:hover{
+  text-decoration: none;
+  border-top-color: #E0E0E0;
+  border-left-color: #E0E0E0;
+  border-right-color: #E0E0E0;
+  border-bottom-color: rgb(20, 189, 172);
+}
+
+
+/* ---------------------------------------------------------------------------- */
+/* Game Turn */
+/* ---------------------------------------------------------------------------- */
+.game-turn{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-turn .player-turn{
+  font-size:15px;
+  font-weight:600;
+}
+
+.game-turn .text-turn{
+  font-size:12px;
+  font-weight:400;
+  margin-left: 2%;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Game Board */
+/* ---------------------------------------------------------------------------- */
+.game-board{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  
+  background:rgb(20, 189, 172);
+  min-height:95%;
+  min-width:95%;
+}
+
+.game-board .squares { padding: 5%; }
+.game-board .squares .square:hover{ border-color:#69F0AE; }
+
+.game-board .squares .square{
+  display: flex;
+  height: 50px;
+  width: 50px;
+  margin-right: -12px;
+  margin-left: -12px;
+  align-items: center;
+  justify-content: center;
+  
+  color: rgb(20, 189, 172);
+  border-color:#78909C; 
+  border-width: 2px;
+  border-radius: 0;
+
+  text-decoration: none;
+  /* color: rgb(20, 189, 172); */
+  font-size: 12px;
+}
+
+.game-board .no-top-border{ border-top: none; }
+.game-board .no-bottom-border{ border-bottom: none; }
+.game-board .no-left-border{ border-left: none; }
+.game-board .no-right-border{ border-right: none; }
+
+.game-board .squares .square:focus, {
+  border-color:#78909C;
+}
+
+.game-board .squares .square:hover{
+  color: rgb(20, 189, 172);
+}
+
+.game-board .squares .square.disabled{
+  align-items: center;
+  justify-content: center;
+  /* font-size: 20px; */
+  /* color:rgb(20, 189, 172); */
+  cursor: not-allowed;
+}
+
+.game-board .squares .square.disable-color{
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-color:#78909C;
+  color: #FFFF;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* Game Restart */
+/* ---------------------------------------------------------------------------- */
+.game-restart{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-restart .btn{
+  width:99%;
+  text-decoration: none;
+  color:rgb(20, 189, 172);
+  border-radius:15px;
+}
+
+.game-restart .btn:focus, .game-restart .btn:hover{
+  width:99%;
+  text-decoration: none;
+  color:#039BE5;
+  border-color:#039BE5;
+  border-radius:15px;
+}
+
+.game-restart .btn.in_game{
+  border: none;
+  cursor: not-allowed;  
+}

@@ -1,0 +1,25 @@
+  <div class="game game-role">
+    
+    <div class="btn btn-role-X" href="#">
+      <div class="char-player role-X">X</div>
+      <div class="char-score">
+        {% if attr['game_score']['X'] == 0 %}
+        -
+        {% else %}
+        {{ attr['game_score']['X'] }}
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="btn btn-role-O" href="#">
+      <div class="char-player role-O">O</div>
+      <div class="char-score">
+        {% if attr['game_score']['O'] == 0 %}
+        -
+        {% else %}
+        {{ attr['game_score']['O'] }}
+        {% endif %}
+      </div>
+    </div>
+    
+  </div>
